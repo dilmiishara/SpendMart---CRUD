@@ -23,6 +23,16 @@ namespace SpendMart.Controllers
             return View();
         }
 
+        public IActionResult CreateEditExpences()
+        {
+            return View();
+        }
+
+        public IActionResult CreateEditExpenseForm(Expense model)
+        {
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Privacy()
         {
             return View();
