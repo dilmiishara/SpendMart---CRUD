@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SpendMart.Models;
+
 namespace SpendMart
 {
     public class Program
@@ -8,6 +11,9 @@ namespace SpendMart
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<SpendSmartDbContext>(options =>
+                options.UseInMemoryDatabase("SpendSmartDb")
+                );
 
             var app = builder.Build();
 
