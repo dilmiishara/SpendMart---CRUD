@@ -35,6 +35,10 @@
 					<td>
 						@expense.Description
 					</td>
+					<td>
+						<a asp-action="CreateEditExpences" asp-route-id="@expense.Id">Edit</a>
+						<a asp-action="DeleteExpense" asp-route-id="@expense.Id">Delete</a>
+					</td>
 				</tr>
 			}
 		}
